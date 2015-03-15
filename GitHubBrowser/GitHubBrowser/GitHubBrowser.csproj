@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{84E8F3C0-352D-49CB-ADB2-82EFE89FA79A}</ProjectGuid>
+    <ProjectGuid>{AF98DF6E-B711-460C-A7E6-5FE7AB765541}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GitHubBrowser</RootNamespace>

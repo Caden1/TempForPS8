@@ -7,14 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GitHubBrowser;
+using ClassLibrary1;
 
 namespace GitHubBrowser
 {
     public partial class Form1 : Form
     {
-        //emo demo = new Demo();
-
         public Form1()
         {
             InitializeComponent();
@@ -22,7 +20,9 @@ namespace GitHubBrowser
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            
+            Class1.CreateClient();
+            searchResultsListBox.Items.Add(Class1.GetAllDemo());
+            //Class1.GetAllDemo();
         }
     }
 }

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubBrowser", "GitHubBrow
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubRest", "GitHubRest\GitHubRest.csproj", "{4DF901CE-23C5-4951-97F5-4CE8ACA33A78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{A5CC148E-7F78-44D9-A4F3-4D95D9907D13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4DF901CE-23C5-4951-97F5-4CE8ACA33A78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DF901CE-23C5-4951-97F5-4CE8ACA33A78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DF901CE-23C5-4951-97F5-4CE8ACA33A78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5CC148E-7F78-44D9-A4F3-4D95D9907D13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5CC148E-7F78-44D9-A4F3-4D95D9907D13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5CC148E-7F78-44D9-A4F3-4D95D9907D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5CC148E-7F78-44D9-A4F3-4D95D9907D13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

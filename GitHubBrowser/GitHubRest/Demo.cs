@@ -15,7 +15,7 @@ namespace GitHubBrowser
     {
         // You'll need to put your own OAuth token here
         // It needs to have repo deletion capability
-        private const string TOKEN = "06ae8533c7d3fbf5bbcb6ce744b4e7b324ed5134";
+        private const string TOKEN = "7d86f8a2f186aafebe80bafd27112825912182c7";
 
         // You'll need to put your own GitHub user name here
         private const string USER_NAME = "Caden1";
@@ -26,11 +26,7 @@ namespace GitHubBrowser
         // You'll need to put one of your public REPOs here
         private const string PUBLIC_REPO = "u0947293";
 
-        public Demo()
-        {
-
-        }
-        /*
+        
         public static void Main(string[] args)
         {
             GetDemo();
@@ -44,7 +40,7 @@ namespace GitHubBrowser
             DeleteDemo();
             Console.ReadLine();
         }
-        */
+        
 
         /// <summary>
         /// Creates a generic client for communicating with GitHub

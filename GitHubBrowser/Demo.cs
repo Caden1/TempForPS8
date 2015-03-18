@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 using System.Dynamic;
 using System.Net.Http;
 
-namespace GitHubBrowser
+namespace Restful
 {
     public class Demo
     {
@@ -26,11 +26,6 @@ namespace GitHubBrowser
         // You'll need to put one of your public REPOs here
         private const string PUBLIC_REPO = "u0947293";
 
-        public Demo()
-        {
-
-        }
-        /*
         public static void Main(string[] args)
         {
             GetDemo();
@@ -44,7 +39,6 @@ namespace GitHubBrowser
             DeleteDemo();
             Console.ReadLine();
         }
-        */
 
         /// <summary>
         /// Creates a generic client for communicating with GitHub

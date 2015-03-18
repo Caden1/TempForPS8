@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using ClassLibrary1;
 using System.Net;
 using System.IO;
 using Newtonsoft.Json.Linq;
@@ -18,9 +13,9 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 
-namespace GitHubBrowser
+namespace ClassLibrary1
 {
-    public partial class Form1 : Form
+    public class Class1
     {
         // You'll need to put your own OAuth token here
         // It needs to have repo deletion capability
@@ -35,28 +30,21 @@ namespace GitHubBrowser
         // You'll need to put one of your public REPOs here
         private const string PUBLIC_REPO = "u0947293";
 
-
-
-
-
-
-        public Form1()
+        /*
+        public static void Main(string[] args)
         {
-            InitializeComponent();
-        }
-
-        private void searchButton_Click(object sender, EventArgs e)
-        {
-            CreateClient();
+            GetDemo();
+            Console.ReadLine();
             GetAllDemo();
-            //Class1.GetAllDemo();
+            Console.ReadLine();
+            GetWithParamsDemo();
+            Console.ReadLine();
+            PostDemo();
+            Console.ReadLine();
+            DeleteDemo();
+            Console.ReadLine();
         }
-
-
-
-
-
-
+         */
 
 
         /// <summary>
@@ -102,10 +90,10 @@ namespace GitHubBrowser
         /// <summary>
         /// Prints out (some of) the users of GitHub, along with the link to use to get more.
         /// </summary>
-        public async void GetAllDemo()
+        public static async Task<IEnumerable<string>> GetAllDemo()
         {
             //////
-            //List<string> newList = new List<string>();
+            List<string> newList = new List<string>();
 
             using (HttpClient client = CreateClient())
             {
@@ -116,30 +104,26 @@ namespace GitHubBrowser
                     dynamic users = JsonConvert.DeserializeObject(result);
                     foreach (dynamic user in users)
                     {
-                        //searchResultsListBox.Items.Add("Hello 1");
-                        searchResultsListBox.Items.Add(user.login);
-                        //newList.Add(user.login);
+                        newList.Add(user.login);
                         //Console.WriteLine(user.login);
                     }
                     foreach (String link in response.Headers.GetValues("Link"))
                     {
-                        //searchResultsListBox.Items.Add("Hello 2");
-                        searchResultsListBox.Items.Add(link);
-                        //newList.Add(link);
+                        newList.Add(link);
                         //Console.WriteLine(link);
                     }
                 }
                 else
                 {
-                    //newList.Add(response.StatusCode.ToString());
-                    //newList.Add(response.ReasonPhrase);
+                    newList.Add(response.StatusCode.ToString());
+                    newList.Add(response.ReasonPhrase);
                     //Console.WriteLine("Error: " + response.StatusCode);
                     //Console.WriteLine(response.ReasonPhrase);
                 }
             }
 
             /////
-            //return newList;
+            return newList;
         }
 
         /// <summary>
